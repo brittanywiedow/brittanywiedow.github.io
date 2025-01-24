@@ -1,0 +1,82 @@
+/*Modern JavaScript CSS*/
+
+/*Website Style*/
+#wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+header {
+    width: 100%;
+    float: left;
+    text-align: center;
+    background-color: gainsboro;
+}
+
+nav {
+    width: 20%;
+    float: left;
+    background-color: white;
+}
+
+main {
+    width: 60%;
+    float: left;
+    font-size: large;
+}
+
+main img {
+    width: 250px;
+    border-radius: 30px;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+section {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+footer {
+    width: 100%;
+    float: left;
+    font-size: small;
+    text-align: center;
+    background-color: gainsboro;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+/*Nav Style*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul a {
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*Nav hover style*/
+
+nav a:hover {
+    text-decoration: underline;
+    color: darkolivegreen;
+}
+
+/*ID styles*/
+
+
+/*Class styles*/
