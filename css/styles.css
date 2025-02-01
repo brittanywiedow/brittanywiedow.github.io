@@ -19,6 +19,10 @@ header {
     background-color: gainsboro;
 }
 
+header h2 {
+    font-size: 1.3;
+}
+
 nav {
     width: 20%;
     float: left;
@@ -76,6 +80,11 @@ nav a:hover {
     color: darkolivegreen;
 }
 
+/*Good Morning, Good Afternoon, Good Evening*/
+h3 {
+    font-style: italic;
+    text-align: center;
+}
 /*ID styles*/
 
 
