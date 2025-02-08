@@ -27,3 +27,7 @@ if (isAfternoon){
 if (isEvening){
     welcome.innerHTML = "<h3>Good Evening!</h3>"
 }
+
+//WEEK FOUR/SECRET MESSAGE
+// must use key of "It's a secret to everybody." and the value is the message
+localStorage.setItem("It's a secret to everybody.", "It's dangerous to go alone! Take this.")
