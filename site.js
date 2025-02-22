@@ -31,3 +31,51 @@ if (isEvening){
 //WEEK FOUR/SECRET MESSAGE
 // must use key of "It's a secret to everybody." and the value is the message
 localStorage.setItem("It's a secret to everybody.", "It's dangerous to go alone! Take this.")
+
+//WEEK SIX/CAROUSEL
+const urls = [
+    'https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/933964/pexels-photo-933964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/1251861/pexels-photo-1251861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/1370296/pexels-photo-1370296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+].map(url => { (new Image()).src = url; return url })
+
+const images = document.querySelectorAll('#carousel img')
+
+let currentImage = 0
+const showImages = () => {
+    const offset = currentImage % urls.length
+    images.forEach((image, index) => {
+        const imageIndex = (index + offset + urls.length) % urls.length
+        image.src = urls[imageIndex]
+    })
+}
+
+showImages()
+
+//add event listener to change picture to the one before it (decrement--) with anonymous arrow function
+const prevBtn = document.querySelector('#prev')
+prevBtn.addEventListener('click', () => {
+    showImages(currentImage--)
+})
+
+//add event listener to change picture to the one before it (increment++) with anonymous arrow function
+const nextBtn = document.querySelector('#next')
+nextBtn.addEventListener('click', () => {
+    showImages(currentImage++)
+})
+
+//function for image change 
+const cycleImage = () => {
+    showImages(currentImage++)
+}
+//set up interval every 5 seconds
+setInterval(cycleImage, 5000)
+
+//reset to the first three images on refresh?
+const resetCarousel = () => {
+    showImages(currentImage)
+}
+
+
