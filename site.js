@@ -80,4 +80,32 @@ const resetCarousel = () => {
 
 
 
-//to-do list assignment separate js file
+//WEEK EIGHT/POKEMON API
+
+// Create the getRandomPokemon function using async/await & have this function return the pokemon object
+const getRandomPokemon = async () => {
+    const url = 'https://pokeapi.co/api/v2/pokemon/' + Math.floor(Math.random() * 300)
+    const response = await fetch(url) 
+    const pokemon = await response.json()
+    return pokemon
+  }
+
+
+  // Create the renderPokemon function that takes a pokemon object as parameter and renders the pokemon image to the page, append to DOM
+
+  const renderPokemon = (pokemon) => {
+    const randomPokemon = document.getElementById('randomPokemon') 
+    const pokemonName = document.getElementById('pokemonName')
+    console.log(pokemon.name)
+    const img = document.createElement('img') 
+    // url of the image from the 'front_default' property
+    img.src = pokemon.sprites.front_default 
+    // name of the pokemon from the 'name' property
+    img.alt = pokemon.name  
+    randomPokemon.append(img)
+    // pokemonName.innerHTML = "name: " + pokemon.name
+    pokemonName.innerHTML = pokemon.name
+  }
+
+// get the random pokemon and then render it to the page
+getRandomPokemon().then(pokemon => renderPokemon(pokemon))

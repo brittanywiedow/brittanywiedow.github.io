@@ -150,3 +150,31 @@ h3 {
     padding: 30px 30px;
     /* background-color: yellow; */
 }
+
+/*pokemon css*/
+
+#randomPokemon {
+    text-align: center;
+    /* padding: 10px */
+    padding-top: 30px;
+}
+
+#randomPokemon img:hover {
+    size: 100%;
+    transform: scaleX(-1);
+}
+
+#pokemonName {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: -5px;
+    text-transform: capitalize;
+}
+
+#header {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+}
